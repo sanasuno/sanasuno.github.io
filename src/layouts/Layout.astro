@@ -1,0 +1,30 @@
+---
+import '@fontsource-variable/noto-serif-jp';
+import '@styles/Global.css'
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import Sidebar from './Sidebar.astro';
+const { title } = Astro.props;
+---
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="ico+xml" href="favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <script src="https://kit.fontawesome.com/f0add8c192.js" crossorigin="anonymous"></script>
+		<title>{title} | Sanasuno</title>
+    </head>
+    <body>
+        <container>
+            <Header />
+            <main>
+                <content>
+                    <slot/>
+                </content>
+                <Sidebar />
+            </main>
+            <Footer />
+        </container>
+    </body>
+</html>

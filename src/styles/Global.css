@@ -1,0 +1,46 @@
+body{
+    background-image: url('/images/background.webp'); /*背景画像の設定*/
+    background-position: center center; /*背景画像を中央に配置*/
+    background-attachment: fixed; /*背景画像をスクロールしても固定*/
+    background-size: cover; /*背景画像のサイズを設定*/
+    margin: 0;
+    width: 100%;
+    font-family: 'Noto Serif JP Variable', serif;
+    font-weight: 600;
+    color: #ccc;
+}
+a{
+    color: #9cf;
+}
+a:hover{
+    color: #e43;
+}
+
+/*モバイル画面で画面下部のボタン分の領域を確保*/
+@media screen and (max-width: 1023px) {
+    body {
+        margin-bottom: 50px;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 65px;
+}
+
+@media screen and (max-width: 1380px) {
+    main{
+        justify-content: space-between;
+    }
+}
+
+content{
+    width: 1035px;
+    background-color: rgba(0,0,0,0.8);
+    border: 4px solid #d7f300;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+

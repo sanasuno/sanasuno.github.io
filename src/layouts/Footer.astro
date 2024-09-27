@@ -1,0 +1,43 @@
+---
+import '@layouts/Layout.astro'
+---
+<style>
+    footer{
+        background-color: rgba(0,0,0,0.8);
+        border-top: 4px solid #d7f300;
+        margin-top: 20px;
+        padding: 8px 0 8px 0;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+        gap: 32px;
+    }
+    li::before{
+        font: var(--fa-font-solid);
+        content: "\f0da";
+    }
+</style>
+<footer>
+    <footer-navi>
+        <ul>
+            <li>
+                <a href="/about">このサイトについて</a>
+            </li>
+            <li>
+                <a href="https://youtube.com/@sanasuno">YouTube</a>
+            </li>
+            <li>
+                <a href="https://x.com/sanasuno_game">X(旧Twitter)</a>
+            </li>
+        </ul>
+    </footer-navi>
+    <copyright>
+        ©CONGOSPHERE.All Rights Reserved.<br>
+        当サイトはCOGNOSPHERE PTE. LTD.様、株式会社CONGOSPHERE様とは関係ありません。<br/>
+    </copyright>
+</footer>

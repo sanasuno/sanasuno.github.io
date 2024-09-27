@@ -1,0 +1,21 @@
+---
+import '@pagefind/default-ui/css/ui.css'
+---
+
+<div id="search"></div>
+<style>
+    :root{
+        --pagefind-ui-primary: #000;
+        --pagefind-ui-text: #ccc;
+        --pagefind-ui-background: #333;
+        --pagefind-ui-border: #ccc;
+        --pagefind-ui-tag: #ccc;
+        --pagefind-ui-font: 'Noto Serif JP Variable', serif;
+    }
+</style>
+<script>
+  import { PagefindUI } from '@pagefind/default-ui'
+  new PagefindUI({
+  element: '#search',
+})
+</script>
