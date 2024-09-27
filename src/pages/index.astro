@@ -1,9 +1,202 @@
 ---
-import Layout from "@layouts/Layout.astro"
-import Search from "@components/Search.astro"
+import Layout from "@layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import Agent from '@assets/images/Agent.png';
+import WEngine from '@assets/images/WEngine.png';
+import DriveDisk from '@assets/images/DriveDisk.png'
+import Bangboo from '@assets/images/Bangboo.png';
 ---
+<style>
+	top-menu{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 16px;
+	}
+	menu-button{
+		background-color: rgba(255,255,255,0.8);
+		box-shadow: 0 0 10px #c0c0c0;
+		border: 4px solid #d7f300;
+		border-radius: 4px;
+		text-align: center;
+		line-height: 12px;
+		padding-bottom: 14px;
+		margin-bottom: 12px;
+	}
+	menu-button a{
+		text-decoration: none;
+		color: #000;
+		font-weight: bolder;
+	}
+	menu-button:hover{
+		background-color: #d7f300;
+	}
+
+	site-map{
+		display: block;
+		text-align: center;
+		width: auto;
+		border: 2px solid #d7f300;
+		border-radius: 8px;
+		padding: 12px;
+	}
+	site-map h2{
+		margin-top: 0px;
+		margin-bottom: 8px;
+	}
+	site-map h3{
+		background-color: #d7f300;
+		margin-top: 0;
+	}
+	site-map h3 a{
+		color: #000;
+		text-decoration: none;
+	}
+	site-map h4{
+		text-align: center;
+	}
+
+	site-map-category{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 16px;
+	}
+	site-map-item-group{
+		display: flex;
+		gap: 8px;
+	}
+	site-map-item{
+		display: block;
+		background-color: #d7f300;
+		border-radius: 8px;
+		width: 60px;
+		padding: 2px;
+		text-align: center;
+		font-size: 12px;
+	}
+	site-map-item a{
+		color: #000;
+		text-decoration: none;
+	}
+	site-map-item a:hover{
+		filter: brightness(80%);
+		color: #e40;
+	}
+</style>
 <Layout title="トップページ">
 	<main-content data-pagefind-body>
-		トップページ
+		<top-menu>
+			<menu-button>
+				<a href="/Agent/"><Image src={Agent} width="120" alt="エージェント" /><br/>エージェント</a>
+			</menu-button>
+			<menu-button>
+				<a href="/WEngine/"><Image src={WEngine} width="120" alt="音動機" /><br/>音動機</a>
+			</menu-button>
+			<menu-button>
+				<a href="/DriveDisk/"><Image src={DriveDisk} width="120" alt="ドライバディスク" /><br/>ドライバディスク</a>
+			</menu-button>
+			<menu-button>
+				<a href="/Bangboo/"><Image src={Bangboo} width="120" alt="ボンプ" /><br/>ボンプ</a>
+			</menu-button>
+		</top-menu>
+		<site-map>
+			<h2>サイトマップ</h2>
+			<site-map-content>
+				<h3><a href="/Agent/">エージェント</a></h3>
+				<site-map-category>
+					<site-map-group>
+						<h4>邪兎屋</h4>
+						<site-map-item-group>
+							<site-map-item>
+								<a href="/Agent/Anby/"><img src="/src/assets/images/agent/Anby-icon.webp" width="60" alt="アンビー" /><br/>アンビー</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Nekomata/"><img src="/src/assets/images/agent/Nekomata-icon.webp" width="60" alt="猫又" /><br/>猫又</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Nicole/"><img src="/src/assets/images/agent/Nicole-icon.webp" width="60" alt="ニコ" /><br/>ニコ</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Billy/"><img src="/src/assets/images/agent/Billy-icon.webp" width="60" alt="ビリー" /><br/>ビリー</a>
+							</site-map-item>
+						</site-map-item-group>
+					</site-map-group>
+					<sit-map-group>
+						<h4>白祇重工</h4>
+						<site-map-item-group>
+							<site-map-item>
+								<a href="/Agent/Koleda"><img src="/src/assets/images/agent/Koleda-icon.webp" width="60" alt="クレタ" /><br/>クレタ</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Anton"><img src="/src/assets/images/agent/Anton-icon.webp" width="60" alt="アンドー" /><br/>アンドー</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Ben"><img src="/src/assets/images/agent/Ben-icon.webp" width="60" alt="ベン" /><br/>ベン</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Grace"><img src="/src/assets/images/agent/Grace-icon.webp" width="60" alt="グレース" /><br/>グレース</a>
+							</site-map-item>
+						</site-map-item-group>
+					</sit-map-group>
+					<sit-map-group>
+						<h4>ヴィクトリア家政</h4>
+						<site-map-item-group>
+							<site-map-item>
+								<a href="/Agent/Corin"><img src="/src/assets/images/agent/Corin-icon.webp" width="60" alt="カリン" /><br/>カリン</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Lycaon"><img src="/src/assets/images/agent/Lycaon-icon.webp" width="60" alt="ライカン" /><br/>ライカン</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Ellen"><img src="/src/assets/images/agent/Ellen-icon.webp" width="60" alt="エレン" /><br/>エレン</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Rina"><img src="/src/assets/images/agent/Rina-icon.webp" width="60" alt="リナ" /><br/>リナ</a>
+							</site-map-item>
+						</site-map-item-group>
+					</sit-map-group>
+					<sit-map-group>
+						<h4>オボルス小隊</h4>
+						<site-map-item-group>
+							<site-map-item>
+								<a href="/Agent/Soldier11"><img src="/src/assets/images/agent/Soldier11-icon.webp" width="60" alt="「11号」" /><br/>「11号」</a>
+							</site-map-item>
+						</site-map-item-group>
+					</sit-map-group>
+					<sit-map-group>
+						<h4>特務捜査班</h4>
+						<site-map-item-group>
+							<site-map-item>
+								<a href="/Agent/ZhuYuan"><img src="/src/assets/images/agent/ZhuYuan-icon.webp" width="60" alt="朱鳶" /><br/>朱鳶</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Qingyi"><img src="/src/assets/images/agent/Qingyi-icon.webp" width="60" alt="青衣" /><br/>青衣</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Jane"><img src="/src/assets/images/agent/Jane-icon.webp" width="60" alt="ジェーン" /><br/>ジェーン</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Seth"><img src="/src/assets/images/agent/Seth-icon.webp" width="60" alt="セス" /><br/>セス</a>
+							</site-map-item>
+						</site-map-item-group>
+					</sit-map-group>
+					<sit-map-group>
+						<h4>カリュドーンの子</h4>
+						<site-map-item-group>
+							<site-map-item>
+								<a href="/Agent/Caesar"><img src="/src/assets/images/agent/Caesar-icon.webp" width="60" alt="シーザー" /><br/>シーザー</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Lucy"><img src="/src/assets/images/agent/Lucy-icon.webp" width="60" alt="ルーシー" /><br/>ルーシー</a>
+							</site-map-item>
+							<site-map-item>
+								<a href="/Agent/Piper"><img src="/src/assets/images/agent/Piper-icon.webp" width="60" alt="パイパー" /><br/>パイパー</a>
+							</site-map-item>
+						</site-map-item-group>
+					</sit-map-group>
+				</site-map-category>
+			</site-map-content>
+		</site-map>
 	</main-content>
 </Layout>
