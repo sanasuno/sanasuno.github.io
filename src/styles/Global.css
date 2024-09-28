@@ -44,3 +44,8 @@ content{
     padding: 10px 14px;
 }
 
+
+navigation a{
+    color: #ccc;
+    text-decoration: none;
+}
