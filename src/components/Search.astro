@@ -1,21 +1,53 @@
 ---
 import '@pagefind/default-ui/css/ui.css'
+// Search.astro
+export interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
 ---
 
-<div id="search"></div>
-<style>
-    :root{
-        --pagefind-ui-primary: #000;
-        --pagefind-ui-text: #ccc;
-        --pagefind-ui-background: #333;
-        --pagefind-ui-border: #ccc;
-        --pagefind-ui-tag: #ccc;
-        --pagefind-ui-font: 'Noto Serif JP Variable', serif;
-    }
-</style>
-<script>
+<div class="search-wrapper" id={id}>
+  <input type="text" id={`search-input-${id}`} placeholder="サイト内検索">
+  <div id={`search-results-${id}`}></div>
+</div>
+
+<script define:vars={{ id }}>
   import { PagefindUI } from '@pagefind/default-ui'
-  new PagefindUI({
-  element: '#search',
-})
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({
+      element: `#${id}`,
+      resetStyles: false,
+      showImages: false
+    });
+  });
 </script>
+
+<style>
+  .search-wrapper {
+    /* ラッパーのスタイル */
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .search-wrapper input[type="text"] {
+    /* 入力フィールドのスタイル */
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px; /* フォントサイズを変更 */
+    font-family: 'Noto Serif JP Variable', serif; /* フォントファミリーを変更 */
+    font-weight: 600;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  /* 検索結果のスタイル */
+  .search-wrapper :global(.pagefind-ui__results) {
+    font-family: 'Noto Serif JP Variable', serif; /* 検索結果のフォントファミリーを変更 */
+    font-size: 14px; /* 検索結果のフォントサイズを変更 */
+    font-weight: 600;
+  }
+</style>

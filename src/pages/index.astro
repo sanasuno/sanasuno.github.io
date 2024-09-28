@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Image } from 'astro:assets';
+import Search from "@components/Search.astro";
 import Agent from '@assets/images/Agent.png';
 import WEngine from '@assets/images/WEngine.png';
 import DriveDisk from '@assets/images/DriveDisk.png'
@@ -134,6 +135,7 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 				<a href="/Bangboo/"><Image src={Bangboo} width="120" alt="ボンプ" /><br/>ボンプ</a>
 			</menu-button>
 		</top-menu>
+		<Search id="indexsearch"/>
 		<site-map>
 			<h2>サイトマップ</h2>
 			<site-map-content>

@@ -1,15 +1,19 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
+import MaterialImages from "MaterialImages.astro";
 import json from "@json/Agent/Anby.json";
 import Icon from "@assets/images/agent/Anby-icon.webp";
 import Splash from "@assets/images/agent/Anby-splash.webp";
 import Faction from "@assets/images/faction/CunningHares.png";
 import Stats from "@assets/images/stats/electric.webp";
-import Speciality from "@assets/images/speciality/Stun.webp"
-import Type from "@assets/images/type/Slash.webp"
+import Speciality from "@assets/images/speciality/Stun.webp";
+import Type from "@assets/images/type/Slash.webp";
+import BasicSeal from "@assets/images/material/BasicStunCertificationSeal.webp";
+import AdvancedSeal from "@assets/images/material/AdvancedStunCertificationSeal.webp";
+import CertificationSeal from "@assets/images/material/BusterCertificationSeal.webp";
 ---
-<Layout title={json.name},thumbnail={json.thumbnail}>
+<Layout title={json.name},thumbnail={Icon}>
     <navigation>
         <span class="fas fa-folder fa-fw"></span>
         <a href="/Agent/">エージェント</a>
@@ -25,6 +29,7 @@ import Type from "@assets/images/type/Slash.webp"
                 <li><a href="#toc1">画像</a></li>
                 <li><a href="#toc2">基本情報</a></li>
                 <li><a href="#toc3">ステータス</a></li>
+                <li><a href="#toc4">育成素材</a></li>
             </ul>
         </content-block>
         <content-block id="toc1">
@@ -114,8 +119,25 @@ import Type from "@assets/images/type/Slash.webp"
             </table>
             （Lv.60時点）
         </content-block>
-        <content-block>
+        <content-block id="toc4">
             <h2>育成素材</h2>
+            <table class="agent-material">
+                <tbody>
+                    <tr>
+                        <th rowspan="3">等級昇格</th>
+                        <td><img src={BasicSeal.src}/>{json.basicseal}</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td><img src={AdvancedSeal.src}/>{json.advancedseal}</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td><img src={CertificationSeal.src}/>{json.certificationseal}</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+            </table>
         </content-block>
     </main-content>
 </Layout>

@@ -1,0 +1,72 @@
+---
+// MaterialImages.astro
+export interface Props {
+  fileName?: string; // 表示したい特定の画像のファイル名
+}
+
+const { fileName } = Astro.props;
+
+interface ImageInfo {
+  src: string;
+  alt: string;
+  title?: string;
+  description?: string;
+}
+
+const imageModules = import.meta.glob<{ default: string }>('@material-images/*.{png,jpg,jpeg,gif,webp}');
+
+const images: ImageInfo[] = await Promise.all(
+  Object.entries(imageModules).map(async ([path, loader]) => {
+    const src = (await loader()).default;
+    const name = path.split('/').pop()!.split('.')[0];
+    return {
+      src,
+      alt: name,
+      title: name.replace(/-/g, ' '),
+      description: `Description for ${name}`
+    };
+  })
+);
+
+// ファイル名が指定された場合、その画像だけを選択
+const selectedImage = fileName 
+  ? images.find(img => img.alt === fileName || img.src.includes(fileName))
+  : null;
+
+---
+
+{selectedImage ? (
+  <div class="single-image">
+    <img src={selectedImage.src} alt={selectedImage.alt} />
+    <h3>{selectedImage.title}</h3>
+    <p>{selectedImage.description}</p>
+  </div>
+) : (
+  <div class="material-images">
+    {images.map((img) => (
+      <div class="image-item">
+        <img src={img.src} alt={img.alt} />
+        <h3>{img.title}</h3>
+        <p>{img.description}</p>
+      </div>
+    ))}
+  </div>
+)}
+
+<style>
+  .material-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .image-item, .single-image {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+</style>
