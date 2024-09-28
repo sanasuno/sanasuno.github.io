@@ -1,7 +1,7 @@
 {
     "name": "アンビー",
     "category": "エージェント",
-    "icon": "@assets/images/agent/Anby-icon.webp",
+    "thumbnail": "@assets/images/agent/Anby-icon.webp",
     "splash": "@assets/images/agent/Anby-splash.webp",
     "fullname": "アンビー・デマラ",
     "rank": "A級",

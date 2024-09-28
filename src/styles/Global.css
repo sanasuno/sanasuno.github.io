@@ -55,6 +55,7 @@ h1{
 
 main-content{
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 16px;
 }
