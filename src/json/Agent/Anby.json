@@ -1,0 +1,17 @@
+{
+    "name": "アンビー",
+    "category": "エージェント",
+    "icon": "@assets/images/agent/Anby-icon.webp",
+    "splash": "@assets/images/agent/Anby-splash.webp",
+    "fullname": "アンビー・デマラ",
+    "rank": "A級",
+    "faction": "邪兎屋",
+    "stats": "電気",
+    "speciality": "撃破",
+    "type": "斬撃",
+    "gender": "女性",
+    "height": "156",
+    "birthday": "2月20日",
+    "cv": "種崎敦美",
+    "ver": "1.0"
+}

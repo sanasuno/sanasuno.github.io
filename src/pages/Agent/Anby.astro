@@ -1,17 +1,85 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
-import Thumbnail from "@assets/images/agent/Anby-icon.webp";
+import json from "@json/Agent/Anby.json";
+import Icon from "@assets/images/agent/Anby-icon.webp";
+import Splash from "@assets/images/agent/Anby-splash.webp";
+import Faction from "@assets/images/faction/CunningHares.png";
+import Stats from "@assets/images/stats/electric.webp";
+import Speciality from "@assets/images/speciality/Stun.webp"
+import Type from "@assets/images/type/Slash.webp"
 ---
-<Layout title="アンビー">
+<Layout title={json.name}>
     <navigation>
         <span class="fas fa-folder fa-fw"></span>
         <a href="/Agent/">エージェント</a>
         <span class="fas fa-angle-right fa-fw"></span>
         <span class="fas fa-file fa-fw"></span>
-        アンビー
+        {json.name}
     </navigation>
+    <h1 data-pagefind-body>{json.name}</h1>
     <main-content data-pagefind-body>
-        <h1>アンビー</h1>
+        <content-block>
+            <h2>目次</h2>
+            <ul class="toc">
+                <li><a href="#toc1">画像</a></li>
+                <li><a href="#toc2">基本情報</a></li>
+            </ul>
+        </content-block>
+        <content-block id="toc1">
+            <h2>画像</h2>
+            <img class="splash-image" src={Splash.src} width="360"/>
+        </content-block>
+        <content-block id="toc2">
+            <h2>基本情報</h2>
+            <table class="basic-info">
+                <tbody>
+                    <tr>
+                        <th>名前</th>
+                        <td>{json.fullname}</td>
+                    </tr>
+                    <tr>
+                        <th>レアリティ</th>
+                        <td>{json.rank}</td>
+                    </tr>
+                    <tr>
+                        <th>陣営</th>
+                        <td><img src={Faction.src} alt={json.faction}/>{json.faction}</td>
+                    </tr>
+                    <tr>
+                        <th>属性</th>
+                        <td><img src={Stats.src} alt={json.faction}/>{json.stats}</td>
+                    </tr>
+                    <tr>
+                        <th>特性</th>
+                        <td><img src={Speciality.src} alt={json.faction}/>{json.speciality}</td>
+                    </tr>
+                    <tr>
+                        <th>攻撃</th>
+                        <td><img src={Type.src} alt={json.faction}/>{json.type}</td>
+                    </tr>
+                    <tr>
+                        <th>性別</th>
+                        <td>{json.gender}</td>
+                    </tr>
+                    <tr>
+                        <th>身長</th>
+                        <td>{json.height}</td>
+                    </tr>
+                    <tr>
+                        <th>誕生日</th>
+                        <td>{json.birthday}</td>
+                    </tr>
+                    <tr>
+                        <th>CV</th>
+                        <td>{json.cv}</td>
+                    </tr>
+                    <tr>
+                        <th>実装</th>
+                        <td>{json.ver}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </content-block>
     </main-content>
 </Layout>
