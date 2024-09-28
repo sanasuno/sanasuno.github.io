@@ -3,24 +3,6 @@ import '@styles/Global.css'
 import Search from '@components/Search.astro'
 ---
 <style>
-    sidebar{
-        top: 0px;
-        position: sticky;
-        height: 100vh;
-        overflow-y: scroll;
-        width: 280px;
-        background-color: rgba(0,0,0,0.8);
-        border: 4px solid #d7f300;
-        border-radius: 8px;
-        padding: 10px 20px;
-    }
-
-    @media screen and (max-width: 1023px) {
-        sidebar{
-            display: none;
-        }    
-    }
-
     sidebar::-webkit-scrollbar{
         width: 8px;
     }

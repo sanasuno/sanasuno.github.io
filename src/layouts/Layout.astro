@@ -4,6 +4,7 @@ import '@styles/Global.css'
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import Sidebar from './Sidebar.astro';
+import Mobilemenu from './Mobilemenu.astro';
 const { title, thumbnail } = Astro.props;
 ---
 <html lang="ja">
@@ -17,6 +18,7 @@ const { title, thumbnail } = Astro.props;
 		<title>{title} | Sanasuno</title>
     </head>
     <body>
+        <Mobilemenu />
         <container>
             <Header />
             <main>

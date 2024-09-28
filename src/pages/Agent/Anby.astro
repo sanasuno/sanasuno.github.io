@@ -24,6 +24,7 @@ import Type from "@assets/images/type/Slash.webp"
             <ul class="toc">
                 <li><a href="#toc1">画像</a></li>
                 <li><a href="#toc2">基本情報</a></li>
+                <li><a href="#toc3">ステータス</a></li>
             </ul>
         </content-block>
         <content-block id="toc1">
@@ -80,6 +81,41 @@ import Type from "@assets/images/type/Slash.webp"
                     </tr>
                 </tbody>
             </table>
+        </content-block>
+        <content-block id="toc3">
+            <h2>ステータス</h2>
+            <table class="agent-status">
+                <tbody>
+                    <tr>
+                        <th>HP</th>
+                        <td>{json.hp}</td>
+                    </tr>
+                    <tr>
+                        <th>攻撃力</th>
+                        <td>{json.atk}</td>
+                    </tr>
+                    <tr>
+                        <th>防御力</th>
+                        <td>{json.def}</td>
+                    </tr>
+                    <tr>
+                        <th>衝撃力</th>
+                        <td>{json.impact}</td>
+                    </tr>
+                    <tr>
+                        <th>異常掌握</th>
+                        <td>{json.mastery}</td>
+                    </tr>
+                    <tr>
+                        <th>異常マスタリー</th>
+                        <td>{json.proficiency}</td>
+                    </tr>
+                </tbody>
+            </table>
+            （Lv.60時点）
+        </content-block>
+        <content-block>
+            <h2>育成素材</h2>
         </content-block>
     </main-content>
 </Layout>

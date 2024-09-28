@@ -1,0 +1,82 @@
+---
+import '@styles/Global.css'
+import Sidebar from './Sidebar.astro'
+import Agent from '@assets/images/Agent.png'
+import Wengine from '@assets/images/WEngine.png'
+import Drivedisk from '@assets/images/DriveDisk.png'
+import Bangboo from '@assets/images/Bangboo.png'
+---
+<style>
+    mobilemenu{
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        color: #000;
+        z-index: 90;
+    }
+    @media screen and (min-width: 1024px) {
+        mobilemenu{
+            display: none;
+        }        
+    }
+
+    mobilemenubutton{
+        text-align: center;
+        display: block;
+    }
+    menu-content{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        background-color: #fff;
+        z-index: 90;
+        transition: all 0.5s;
+    }
+    #sidebar-menu-input{
+        display: none;
+    }
+    a{
+        color: #000;
+    }
+</style>
+<mobilemenu>
+    <mobilemenubutton>
+        <input id="sidebar-menu-input" type="checkbox">
+        <label for="sidebar-menu-input">
+            <i class="fa-solid fa-bars" style="font-size: 36px; margin-top: 6px"></i><br/>
+        </label>
+        <label for="sidebar-menu-input" id="sidebar-close"/>
+        <Sidebar/>
+    </mobilemenubutton>
+    <mobilemenubutton>
+        <a href="/" style="text-decoration: none;">
+            <i class="fa-solid fa-house" style="font-size: 36px; margin-top: 6px;"></i><br/>
+        </a>
+    </mobilemenubutton>
+    <mobilemenubutton>
+        <a href="/Agent/" style="text-decoration: none;">
+            <img src={Agent.src} width="48"/><br/>
+        </a>
+    </mobilemenubutton>
+    <mobilemenubutton>
+        <a href="/WEngine/" style="text-decoration: none;">
+            <img src={Wengine.src} width="48"/><br/>
+        </a>
+    </mobilemenubutton>
+    <mobilemenubutton>
+        <a href="/DriveDisk/" style="text-decoration: none;">
+            <img src={Drivedisk.src} width="48"/><br/>
+        </a>
+    </mobilemenubutton>
+    <mobilemenubutton>
+        <a href="/Bangboo/" style="text-decoration: none;">
+            <img src={Bangboo.src} width="48"/><br/>
+        </a>
+    </mobilemenubutton>
+</mobilemenu>

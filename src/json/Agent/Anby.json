@@ -13,5 +13,11 @@
     "height": "156",
     "birthday": "2月20日",
     "cv": "種崎敦美",
-    "ver": "1.0"
+    "ver": "1.0",
+    "hp": "7500",
+    "atk": "583",
+    "def": "612",
+    "impact": "118",
+    "mastery": "94",
+    "proficiency": "93"
 }
