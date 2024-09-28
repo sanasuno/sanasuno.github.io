@@ -90,11 +90,9 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 		gap: 6px;
 	}
 	site-map-item{
-		display: block;
-		background-color: #d7f300;
+		border: 2px solid #d7f300;
 		border-radius: 4px;
 		width: 60px;
-		padding: 2px;
 		text-align: center;
 		font-size: 12px;
 		font-weight: 600;
@@ -106,6 +104,18 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 	site-map-item a:hover{
 		filter: brightness(80%);
 		color: #e40;
+	}
+	site-map-item.s-rank{
+		background-color: #feb500;
+	}
+	site-map-item.a-rank{
+		background-color: #ea05fe;
+	}
+	site-map-item.b-rank{
+		background-color: #29bbff;
+	}
+	site-map-item img{
+		border-bottom: 2px solid #d7f300;
 	}
 </style>
 <Layout title="トップページ">
@@ -132,16 +142,16 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 					<site-map-group>
 						<h4>邪兎屋</h4>
 						<site-map-item-group>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Anby/"><img src={Anby.src} width="60" alt="アンビー" /><br/>アンビー</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Nekomata/"><img src={Nekomata.src} width="60" alt="猫又" /><br/>猫又</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Nicole/"><img src={Nicole.src} width="60" alt="ニコ" /><br/>ニコ</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Billy/"><img src={Billy.src} width="60" alt="ビリー" /><br/>ビリー</a>
 							</site-map-item>
 						</site-map-item-group>
@@ -149,16 +159,16 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 					<site-map-group>
 						<h4>白祇重工</h4>
 						<site-map-item-group>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Koleda"><img src={Koleda.src} width="60" alt="クレタ" /><br/>クレタ</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Anton"><img src={Anton.src} width="60" alt="アンドー" /><br/>アンドー</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Ben"><img src={Ben.src} width="60" alt="ベン" /><br/>ベン</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Grace"><img src={Grace.src} width="60" alt="グレース" /><br/>グレース</a>
 							</site-map-item>
 						</site-map-item-group>
@@ -166,16 +176,16 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 					<site-map-group>
 						<h4>ヴィクトリア家政</h4>
 						<site-map-item-group>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Corin"><img src={Corin.src} width="60" alt="カリン" /><br/>カリン</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Lycaon"><img src={Lycaon.src} width="60" alt="ライカン" /><br/>ライカン</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Ellen"><img src={Ellen.src} width="60" alt="エレン" /><br/>エレン</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Rina"><img src={Rina.src} width="60" alt="リナ" /><br/>リナ</a>
 							</site-map-item>
 						</site-map-item-group>
@@ -183,7 +193,7 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 					<site-map-group>
 						<h4>オボルス小隊</h4>
 						<site-map-item-group>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Soldier11"><img src={Soldier11.src} width="60" alt="「11号」" /><br/>「11号」</a>
 							</site-map-item>
 						</site-map-item-group>
@@ -191,16 +201,16 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 					<site-map-group>
 						<h4>特務捜査班</h4>
 						<site-map-item-group>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/ZhuYuan"><img src={ZhuYuan.src} width="60" alt="朱鳶" /><br/>朱鳶</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Qingyi"><img src={Qingyi.src} width="60" alt="青衣" /><br/>青衣</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Jane"><img src={Jane.src} width="60" alt="ジェーン" /><br/>ジェーン</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Seth"><img src={Seth.src} width="60" alt="セス" /><br/>セス</a>
 							</site-map-item>
 						</site-map-item-group>
@@ -208,13 +218,13 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 					<site-map-group>
 						<h4>カリュドーンの子</h4>
 						<site-map-item-group>
-							<site-map-item>
+							<site-map-item class="s-rank">
 								<a href="/Agent/Caesar"><img src={Caesar.src} width="60" alt="シーザー" /><br/>シーザー</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Lucy"><img src={Lucy.src} width="60" alt="ルーシー" /><br/>ルーシー</a>
 							</site-map-item>
-							<site-map-item>
+							<site-map-item class="a-rank">
 								<a href="/Agent/Piper"><img src={Piper.src} width="60" alt="パイパー" /><br/>パイパー</a>
 							</site-map-item>
 						</site-map-item-group>
@@ -225,7 +235,7 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 					<site-map-group>
 						<h4>強攻</h4>
 						<site-map-item-group>
-							<site-map-item>
+							<site-map-item class="b-rank">
 								<a href="/WEngine/LunarDecrescent"><img src={LunarDecrescent.src} width="60" alt="「月相」-晦" /><br/>「月相」-晦</a>
 							</site-map-item>
 						</site-map-item-group>
