@@ -1,7 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Image } from 'astro:assets';
-import Search from "@components/Search.astro";
 import Agent from '@assets/images/Agent.png';
 import WEngine from '@assets/images/WEngine.png';
 import DriveDisk from '@assets/images/DriveDisk.png'
@@ -44,6 +43,7 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 		line-height: 12px;
 		padding-bottom: 14px;
 		margin-bottom: 12px;
+		font-size: 14px;
 	}
 	menu-button a{
 		text-decoration: none;
@@ -123,19 +123,18 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 	<top-content data-pagefind-body>
 		<top-menu>
 			<menu-button>
-				<a href="/Agent/"><Image src={Agent} width="120" alt="エージェント" /><br/>エージェント</a>
+				<a href="/Agent/"><img src={Agent.src} width="120" alt="エージェント" /><br/>エージェント</a>
 			</menu-button>
 			<menu-button>
-				<a href="/WEngine/"><Image src={WEngine} width="120" alt="音動機" /><br/>音動機</a>
+				<a href="/WEngine/"><img src={WEngine.src} width="120" alt="音動機" /><br/>音動機</a>
 			</menu-button>
 			<menu-button>
-				<a href="/DriveDisk/"><Image src={DriveDisk} width="120" alt="ドライバディスク" /><br/>ドライバディスク</a>
+				<a href="/DriveDisk/"><img src={DriveDisk.src} width="120" alt="ドライバディスク" /><br/>ドライバディスク</a>
 			</menu-button>
 			<menu-button>
-				<a href="/Bangboo/"><Image src={Bangboo} width="120" alt="ボンプ" /><br/>ボンプ</a>
+				<a href="/Bangboo/"><img src={Bangboo.src} width="120" alt="ボンプ" /><br/>ボンプ</a>
 			</menu-button>
 		</top-menu>
-		<Search id="indexsearch"/>
 		<site-map>
 			<h2>サイトマップ</h2>
 			<site-map-content>
