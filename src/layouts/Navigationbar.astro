@@ -1,0 +1,50 @@
+---
+import '@styles/Global.css';
+import Search from '@components/Search.astro';
+---
+<style>
+    navigationbar{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        align-items: flex-start;
+        top: 0;
+        width: 100%;
+        min-height: 50px;
+        background-color: rgba(0,0,0,0.8);
+    }
+    navigation-title img{
+        display: flex;
+        padding: 0;
+    }
+    searchbar{
+        width: calc(100% - 250px);
+    }
+    navigation-social a{
+        color: #ccc;
+        text-decoration: none;
+    }
+    @media screen and (max-width:1023px) {
+        navigation-title{
+            display: none;
+        }
+        searchbar{
+            width: 100%;
+        }
+        navigation-social{
+            display: none;
+        }
+    }
+</style>
+<navigationbar>
+    <navigation-title>
+        <a href="/"><img src="/images/logo_white.png" height="50"/></a>
+    </navigation-title>
+    <searchbar>
+        <Search/>
+    </searchbar>
+    <navigation-social>
+        <a href="https://x.com/sanasuno_game/"><i class="fa-brands fa-x-twitter" style="font-size: 48px;"></i></a>
+        <a href="https://youtube.com/@sanasuno"><i class="fa-brands fa-youtube" style="font-size: 48px;"></i></a>
+    </navigation-social>
+</navigationbar>

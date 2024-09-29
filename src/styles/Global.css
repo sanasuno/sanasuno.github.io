@@ -3,7 +3,7 @@ body{
     background-position: center center; /*背景画像を中央に配置*/
     background-attachment: fixed; /*背景画像をスクロールしても固定*/
     background-size: cover; /*背景画像のサイズを設定*/
-    margin: 0;
+    margin: 50px 0 0 0;
     width: 100%;
     font-family: 'Noto Serif JP Variable', serif;
     font-weight: 600;
@@ -36,8 +36,12 @@ main{
     }
 }
 
+navigationbar{
+    z-index: 100;
+}
+
 sidebar{
-    top: 0px;
+    top: 50px;
     position: sticky;
     height: 100vh;
     overflow-y: scroll;
@@ -46,6 +50,7 @@ sidebar{
     border: 4px solid #d7f300;
     border-radius: 8px;
     padding: 10px 20px;
+    z-index: 99;
 }
 
 @media screen and (max-width: 1023px) {
