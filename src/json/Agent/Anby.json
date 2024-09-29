@@ -22,5 +22,10 @@
     "proficiency": "93",
     "basicseal": "初級撃破認証バッジ",
     "advancedseal": "高級撃破認証バッジ",
-    "certificationseal": "ブレイカー認証バッジ"
+    "certificationseal": "ブレイカー認証バッジ",
+    "basicchip": "基礎感電チップ",
+    "advancedchip": "上級感電チップ",
+    "specializedchip": "特化感電チップ",
+    "higherdimensionaldata": "高次元データ：凶刑の訃報",
+    "notorioushunt": "殺戮を掴む掌"
 }

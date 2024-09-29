@@ -12,6 +12,12 @@ import Type from "@assets/images/type/Slash.webp";
 import BasicSeal from "@assets/images/material/BasicStunCertificationSeal.webp";
 import AdvancedSeal from "@assets/images/material/AdvancedStunCertificationSeal.webp";
 import CertificationSeal from "@assets/images/material/BusterCertificationSeal.webp";
+import BasicChip from "@assets/images/material/BasicShockChip.webp";
+import AdvancedChip from "@assets/images/material/AdvancedShockChip.webp";
+import SpecializedChip from "@assets/images/material/SpecializedShockChip.webp";
+import HamsterCagePass from "@assets/images/material/HamsterCagePass.webp";
+import HigherDimensionalData from "@assets/images/material/MurderousObituary.gif";
+import NotoriousHunt from "@assets/images/material/FerociousGrip.gif";
 ---
 <Layout title={json.name},thumbnail={Icon}>
     <navigation>
@@ -135,6 +141,32 @@ import CertificationSeal from "@assets/images/material/BusterCertificationSeal.w
                     <tr>
                         <td><img src={CertificationSeal.src}/>{json.certificationseal}</td>
                         <td>30</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="4">スキル</th>
+                        <td><img src={BasicChip.src}/>{json.basicchip}</td>
+                        <td>5x5</td>
+                    </tr>
+                    <tr>
+                        <td><img src={AdvancedChip.src}/>{json.advancedchip}</td>
+                        <td>15x5</td>
+                    </tr>
+                    <tr>
+                        <td><img src={SpecializedChip.src}/>{json.specializedchip}</td>
+                        <td>50x5</td>
+                    </tr>
+                    <tr>
+                        <td><img src={HamsterCagePass.src}/>ハムスターケージ</td>
+                        <td>1x5</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">コアスキル</th>
+                        <td><img src={HigherDimensionalData.src}/>{json.higherdimensionaldata}</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td><img src={NotoriousHunt.src}/>{json.notorioushunt}</td>
+                        <td>9</td>
                     </tr>
                 </tbody>
             </table>
