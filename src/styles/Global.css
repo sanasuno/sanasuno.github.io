@@ -103,6 +103,10 @@ h2{
     border-bottom: 2px solid #ccc;
 }
 
+h3{
+    margin: 0;
+}
+
 img.splash-image{
     width: 360px;
 }
@@ -129,9 +133,10 @@ ul.toc li::before{
     border-radius: 6px;
 }
 
-table.basic-info{
+tbody{
     border: 2px solid #d7f300;
 }
+
 
 table, table > * > * > *{
     border: 1px solid #d7f300;
@@ -145,4 +150,44 @@ table th{
 table td img{
     vertical-align: middle;
     width: 22px;
+}
+
+.tab {
+    color: white;
+    padding: 2px 10px;
+    border: 2px solid #d7f300;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+._tab-bar_jalmb_1 {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tab-selector:checked ~ .tab {
+    color: black;
+    background: #d7f300;
+}
+  
+.panel {
+    padding: 8px;
+    border: 2px solid #d7f300;
+    border-radius: 0 0 4px 4px;
+}
+
+._panels_jalmb_6 {
+    width: calc(100% - 20px);
+}
+
+.skill{
+    max-width: 464px;
+}
+
+.physical{
+    color: #f0d12b
+}
+.electric{
+    color: #2eb6ff;
 }

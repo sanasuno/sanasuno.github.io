@@ -1,14 +1,15 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
-import MaterialImages from "MaterialImages.astro";
+import { Tabs } from "astro-tabs";
 import json from "@json/Agent/Anby.json";
-import Icon from "@assets/images/agent/Anby-icon.webp";
+import Thumbnail from "@assets/images/agent/Anby-icon.webp";
 import Splash from "@assets/images/agent/Anby-splash.webp";
 import Faction from "@assets/images/faction/CunningHares.png";
 import Stats from "@assets/images/stats/electric.webp";
 import Speciality from "@assets/images/speciality/Stun.webp";
 import Type from "@assets/images/type/Slash.webp";
+
 import BasicSeal from "@assets/images/material/BasicStunCertificationSeal.webp";
 import AdvancedSeal from "@assets/images/material/AdvancedStunCertificationSeal.webp";
 import CertificationSeal from "@assets/images/material/BusterCertificationSeal.webp";
@@ -18,8 +19,10 @@ import SpecializedChip from "@assets/images/material/SpecializedShockChip.webp";
 import HamsterCagePass from "@assets/images/material/HamsterCagePass.webp";
 import HigherDimensionalData from "@assets/images/material/MurderousObituary.gif";
 import NotoriousHunt from "@assets/images/material/FerociousGrip.gif";
+
+import Basicattack from "@assets/images/attackbutton/BasicAttackButton.webp";
 ---
-<Layout title={json.name},thumbnail={Icon}>
+<Layout title={json.name},thumbnail={Thumbnail}>
     <navigation>
         <span class="fas fa-folder fa-fw"></span>
         <a href="/Agent/">エージェント</a>
@@ -36,6 +39,7 @@ import NotoriousHunt from "@assets/images/material/FerociousGrip.gif";
                 <li><a href="#toc2">基本情報</a></li>
                 <li><a href="#toc3">ステータス</a></li>
                 <li><a href="#toc4">育成素材</a></li>
+                <li><a href="#toc5">スキル</a></li>
             </ul>
         </content-block>
         <content-block id="toc1">
@@ -170,6 +174,36 @@ import NotoriousHunt from "@assets/images/material/FerociousGrip.gif";
                     </tr>
                 </tbody>
             </table>
+        </content-block>
+        <content-block class="skill" id="toc5">
+            <h2>スキル</h2>
+            <Tabs class="skill" class:list={['skill-list']}>
+                <Fragment slot="tab-1">通常攻撃</Fragment>
+                <Fragment slot="tab-2">回避</Fragment>
+                <Fragment slot="tab-4">支援スキル</Fragment>
+                <Fragment slot="tab-3">特殊スキル</Fragment>
+                <Fragment slot="tab-5">連携スキル</Fragment>
+              
+                <Fragment slot="panel-1">
+                    <h3>通常攻撃：ボルトターボ</h3>
+                    <img src={Basicattack.src} width="16px">を押して発動：<br/>
+                    前方に最大4段の斬撃を放つ。最初の3段は<span class="physical">物理属性ダメージ</span>を与え、4段目は<span class="electric">電気属性ダメージ</span>を与える。
+                </Fragment>
+              
+                <Fragment slot="panel-2">
+                    b
+                </Fragment>
+              
+                <Fragment slot="panel-3">
+                    c
+                </Fragment>
+                <Fragment slot="panel-4">
+                    d
+                </Fragment>
+                <Fragment slot="panel-5">
+                    e
+                </Fragment>
+              </Tabs>
         </content-block>
     </main-content>
 </Layout>
