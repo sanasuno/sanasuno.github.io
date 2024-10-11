@@ -25,6 +25,7 @@ import Seth from '@assets/images/agent/Seth-icon.webp'
 import Caesar from '@assets/images/agent/Caesar-icon.webp'
 import Lucy from '@assets/images/agent/Lucy-icon.webp'
 import Piper from '@assets/images/agent/Piper-icon.webp'
+import Soukaku from '@assets/images/agent/Soukaku-icon.webp'
 import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 ---
 <style>
@@ -94,6 +95,7 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 		border: 2px solid #d7f300;
 		border-radius: 4px;
 		width: 60px;
+		background-color: #d7f300;
 		text-align: center;
 		font-size: 12px;
 		font-weight: 600;
@@ -106,16 +108,16 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 		filter: brightness(80%);
 		color: #666;
 	}
-	site-map-item.s-rank{
+	site-map-item.s-rank img{
 		background-color: #ffb500;
 	}
-	site-map-item.a-rank{
+	site-map-item.a-rank img{
 		background-color: #e900ff;
 	}
-	site-map-item.b-rank{
+	site-map-item.b-rank img{
 		background-color: #00a9ff;
 	}
-	site-map-item.c-rank{
+	site-map-item.c-rank img{
 		background-color: #7da89b;
 	}
 	site-map-item img{
@@ -230,6 +232,14 @@ import LunarDecrescent from '@assets/images/wengine/LunarDecrescent.webp'
 							</site-map-item>
 							<site-map-item class="a-rank">
 								<a href="/Agent/Piper"><img src={Piper.src} width="60" alt="パイパー" /><br/>パイパー</a>
+							</site-map-item>
+						</site-map-item-group>
+					</site-map-group>
+					<site-map-group>
+						<h4>対ホロウ特別行動部第六課</h4>
+						<site-map-item-group>
+							<site-map-item class="a-rank">
+								<a href="/Agent/Soukaku"><img src={Soukaku.src} width="60" alt="蒼角" /><br/>蒼角</a>
 							</site-map-item>
 						</site-map-item-group>
 					</site-map-group>
