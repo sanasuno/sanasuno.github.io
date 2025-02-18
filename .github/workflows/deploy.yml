@@ -28,7 +28,7 @@ jobs:
       - name: Docusaurus をビルド
         run: npm run build
 
-      - name: `docs` フォルダを `main` ブランチに直接デプロイ
+      - name: docs フォルダを main ブランチに直接デプロイ
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
