@@ -3,7 +3,7 @@ name: Deploy Docusaurus to GitHub Pages
 on:
   push:
     branches:
-      - main  # mainブランチにプッシュ時に実行
+      - main  # mainブランチへのプッシュ時に実行
 
 jobs:
   build:
@@ -25,10 +25,38 @@ jobs:
       - name: Build Docusaurus site
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: main  # mainブランチへデプロイ
-          force_orphan: true  # mainブランチの履歴をクリアして上書き
+          name: docusaurus-build
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: docusaurus-build
+          path: build
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout main
+          rm -rf *
+          mv build/* .
+          rm -rf build
+          touch .nojekyll
+          git add .
+          git commit -m "Deploy Docusaurus site"
+          git push origin main --force
