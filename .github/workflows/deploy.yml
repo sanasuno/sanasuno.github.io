@@ -1,37 +1,31 @@
-name: Deploy Docusaurus to GitHub Pages
+name: Deploy Docusaurus site to GitHub Pages
 
 on:
   push:
     branches:
-      - main
-
-permissions:
-  contents: write  # コミット権限を付与
+      - main  # mainブランチに変更があったときにデプロイが実行される
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: リポジトリをチェックアウト
-        uses: actions/checkout@v4
+    - name: Check out the repository
+      uses: actions/checkout@v2
 
-      - name: Node.js のセットアップ
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: npm
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
 
-      - name: 依存関係のインストール
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Docusaurus のビルド
-        run: npm run build
+    - name: Build the Docusaurus site
+      run: npm run build
 
-      - name: ビルド成果物を main ブランチにコミット
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f build
-          git commit -m "Deploy Docusaurus site to GitHub Pages"
-          git push origin main
+    - name: Deploy to GitHub Pages
+      run: |
+        npm install --save gh-pages
+        npx gh-pages -d build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
