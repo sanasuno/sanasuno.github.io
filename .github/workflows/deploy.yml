@@ -3,31 +3,28 @@ name: Deploy Docusaurus site to GitHub Pages
 on:
   push:
     branches:
-      - main  # mainブランチへのプッシュ時にデプロイ
+      - main  # mainブランチにpushされた際にトリガーされる
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
+      - name: Check out repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'  # 使用するNode.jsのバージョン
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Install dependencies
-      run: |
-        npm ci
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build Docusaurus site
-      run: |
-        npm run build
+      - name: Build the Docusaurus site
+        run: npm run build
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        deploy_key: ${{ secrets.DEPLOY_KEY }}  # GitHubの秘密鍵を使用
-        publish_dir: ./build
+      - name: Deploy to GitHub Pages
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Actionsの自動トークンを使用
