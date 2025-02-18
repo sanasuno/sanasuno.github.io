@@ -3,10 +3,10 @@ name: Deploy Docusaurus to GitHub Pages
 on:
   push:
     branches:
-      - main  # mainブランチにプッシュしたときに実行
+      - main
 
 permissions:
-  contents: write  # GitHub Pagesにデプロイするための権限
+  contents: write  # コミット権限を付与
 
 jobs:
   deploy:
@@ -28,10 +28,10 @@ jobs:
       - name: Docusaurus のビルド
         run: npm run build
 
-      - name: GitHub Pages へデプロイ
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: main  # mainブランチのみにデプロイ
-          force_orphan: false  # gh-pagesブランチを作成しない
+      - name: ビルド成果物を main ブランチにコミット
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f build
+          git commit -m "Deploy Docusaurus site to GitHub Pages"
+          git push origin main
