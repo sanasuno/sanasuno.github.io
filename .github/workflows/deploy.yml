@@ -3,14 +3,12 @@ name: Deploy Docusaurus to GitHub Pages
 on:
   push:
     branches:
-      - main  # メインブランチに push されたら実行
-
-permissions:
-  contents: write  # gh-pages ブランチに書き込むための権限
+      - main  # mainブランチにプッシュ時に実行
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,17 +17,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'yarn'  # または 'npm' を指定可能
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install  # npm を使う場合は `npm install`
+        run: npm ci
 
-      - name: Build Docusaurus
-        run: yarn build  # npm を使う場合は `npm run build`
+      - name: Build Docusaurus site
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          publish_branch: main
+          publish_branch: main  # mainブランチへデプロイ
+          force_orphan: true  # mainブランチの履歴をクリアして上書き
