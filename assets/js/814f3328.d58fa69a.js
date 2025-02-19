@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksanasuno=self.webpackChunksanasuno||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"\u30d6\u30ed\u30b0","items":[{"title":"\u30c6\u30b9\u30c8","permalink":"/blog/2025/02/09/a","unlisted":false,"date":"2025-02-09T00:00:00.000Z"}]}')}}]);
