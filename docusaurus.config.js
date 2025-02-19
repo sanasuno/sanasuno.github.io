@@ -51,10 +51,12 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: 'ブログ',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
+          truncateMarker:  /<!--\s*(more)\s*-->/,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
