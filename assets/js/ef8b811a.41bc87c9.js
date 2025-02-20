@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksanasuno=self.webpackChunksanasuno||[]).push([[947],{6600:s=>{s.exports=JSON.parse('{"authors":[{"name":"\u3055\u306a\u3059\u306e","title":"\u8003\u5bdf\u52e2","page":{"permalink":"/blog/authors/sanasuno"},"socials":{"x":"https://x.com/sanasuno_game","youtube":"https://youtube.com/@sanasuno"},"key":"sanasuno","count":0}]}')}}]);
