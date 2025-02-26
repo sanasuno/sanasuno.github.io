@@ -102,9 +102,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'genshinSidebar',
+            sidebarId: 'anadenSidebar',
             position: 'left',
-            label: '原神',
+            label: 'アナデン',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'zzzSidebar',
+            position: 'left',
+            label: 'ゼンゼロ',
           },
           {to: '/blog', label: 'ブログ', position: 'left'},
           {
