@@ -1,12 +1,12 @@
 // src/theme/BlogPostItem/Footer/index.js
 import React from 'react';
-import Footer from '@theme-original/BlogPostItem/Footer';
+import BlogPostItem from '@theme-original/BlogPostItem';
 import GiscusComments from '@site/src/components/GiscusComments';
 
 export default function FooterWrapper(props) {
   return (
     <>
-      <Footer {...props} />
+      <BlogPostItem {...props} />
       <GiscusComments />
     </>
   );
