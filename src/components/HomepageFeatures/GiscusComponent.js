@@ -1,18 +1,13 @@
----
-title: はじめに
----
+// src/components/GiscusComponent.js
+import React from 'react';
+import { useColorMode } from '@docusaurus/theme-common';
 
-どうも、さなすのです。
-
-というわけで、ブログをこちらに移転しました。
-
-今後はとりあえず旧サイトでやっていたようなゲームの考察なんかがメインになるかと思います。
-
-それでは。
-
-<!-- more -->
-
-<script src="https://giscus.app/client.js"
+function GiscusComponent() {
+  const { colorMode } = useColorMode();
+  return (
+    <div>
+      <script
+        src="https://giscus.app/client.js"
         data-repo="sanasuno/sanasuno.github.io"
         data-repo-id="R_kgDON7MpzA"
         data-category="Announcements"
@@ -25,5 +20,10 @@ title: はじめに
         data-theme="preferred_color_scheme"
         data-lang="ja"
         crossorigin="anonymous"
-        async>
-</script>
+        async
+      ></script>
+    </div>
+  );
+}
+
+export default GiscusComponent;
