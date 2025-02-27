@@ -127,7 +127,7 @@ const config = {
             items: [
               {
                 label: 'X',
-                href: 'https://x.com/sanasuno',
+                href: 'https://x.com/sanasuno_game',
               },
               {
                 label: 'メール',
