@@ -39,3 +39,9 @@ html[data-theme='dark'] {
   padding: 0 2rem;
   transition: background-color 0.3s ease;
 }
+/* src/css/custom.css */
+.giscus-comments-container {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}

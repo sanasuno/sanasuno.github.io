@@ -151,7 +151,18 @@ const config = {
         language: ["ja"],
       }
     ]
-  ]
+  ],
+  customFields: {
+    giscus: {
+      repo: 'sanasuno/sanasuno.github.io',
+      repoId: 'R_kgDON7MpzA',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDON7MpzM4CnaLx',
+      mapping: 'pathnamae',
+      reactionEnabled: '1',
+      emitMetadata: '0',
+    },
+  },
 };
 
 export default config;
