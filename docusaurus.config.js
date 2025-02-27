@@ -100,24 +100,19 @@ const config = {
           srcDark: 'img/logo-dark.png'
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'anadenSidebar',
-            position: 'left',
-            label: 'アナデン',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'zzzSidebar',
-            position: 'left',
-            label: 'ゼンゼロ',
-          },
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'anadenSidebar',
+          //  position: 'left',
+          //  label: 'アナデン',
+          //},
+          //{
+          //  type: 'docSidebar',
+          //  sidebarId: 'zzzSidebar',
+          //  position: 'left',
+          //  label: 'ゼンゼロ',
+          //},
           {to: '/blog', label: 'ブログ', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -152,6 +147,15 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["ja"],
+      }
+    ]
+  ]
 };
 
 export default config;
