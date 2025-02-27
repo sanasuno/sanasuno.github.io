@@ -4,19 +4,20 @@
         <title>さなすの考察録 Blog</title>
         <link>https://sanasuno.github.io/blog</link>
         <description>さなすの考察録 Blog</description>
-        <lastBuildDate>Sun, 09 Feb 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 28 Feb 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
         <item>
-            <title><![CDATA[テスト]]></title>
-            <link>https://sanasuno.github.io/blog/2025/02/09/a</link>
-            <guid>https://sanasuno.github.io/blog/2025/02/09/a</guid>
-            <pubDate>Sun, 09 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[テスト]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="テスト">テスト<a href="https://sanasuno.github.io/blog/2025/02/09/a#%E3%83%86%E3%82%B9%E3%83%88" class="hash-link" aria-label="テスト への直接リンク" title="テスト への直接リンク">​</a></h2>
-<p>ブログテスト
-a</p>]]></content:encoded>
+            <title><![CDATA[はじめに]]></title>
+            <link>https://sanasuno.github.io/blog/2025/02/28/a</link>
+            <guid>https://sanasuno.github.io/blog/2025/02/28/a</guid>
+            <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[どうも、さなすのです。]]></description>
+            <content:encoded><![CDATA[<p>どうも、さなすのです。</p>
+<p>というわけで、ブログをこちらに移転しました。</p>
+<p>今後はとりあえず旧サイトでやっていたようなゲームの考察なんかがメインになるかと思います。</p>
+<p>それでは。</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
