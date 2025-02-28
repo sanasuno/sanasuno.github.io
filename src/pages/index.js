@@ -17,8 +17,7 @@ export default function Home() {
 
       {/* メインコンテンツ */}
       <main style={{ textAlign: 'center', padding: '2rem' }}>
-      {/*}  <h2><a href='/anaden'>アナザーエデン</a></h2>
-        <h2><a href='/zzz'>ゼンレスゾーンゼロ</a></h2>*/}
+      {/*}  <h2><a href='/anaden'>アナザーエデン</a></h2>*/}
         <h2><a href='/blog'>ブログ</a></h2>
       </main>
 

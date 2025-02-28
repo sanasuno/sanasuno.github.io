@@ -102,12 +102,6 @@ const config = {
           //  position: 'left',
           //  label: 'アナデン',
           //},
-          //{
-          //  type: 'docSidebar',
-          //  sidebarId: 'zzzSidebar',
-          //  position: 'left',
-          //  label: 'ゼンゼロ',
-          //},
           {to: '/blog', label: 'ブログ', position: 'left'},
         ],
       },
