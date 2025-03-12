@@ -4,14 +4,57 @@
         <title>さなすの考察録 Blog</title>
         <link>https://sanasuno.github.io/blog</link>
         <description>さなすの考察録 Blog</description>
-        <lastBuildDate>Fri, 28 Feb 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 11 Mar 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
         <item>
+            <title><![CDATA[ゼンゼロ Ver1.5 感想]]></title>
+            <link>https://sanasuno.github.io/blog/2025/03/11/1</link>
+            <guid>https://sanasuno.github.io/blog/2025/03/11/1</guid>
+            <pubDate>Tue, 11 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[どうも、さなすのです。]]></description>
+            <content:encoded><![CDATA[<p>どうも、さなすのです。</p>
+<p>ゼンレスゾーンゼロ Ver1.5「輝きのモーメント」の感想です。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ストーリー">ストーリー<a href="https://sanasuno.github.io/blog/2025/03/11/1#%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC" class="hash-link" aria-label="ストーリー への直接リンク" title="ストーリー への直接リンク">​</a></h2>
+<p>前回（Ver1.4）でメインストーリーとしては一段落し、今回は特別劇場が追加される形に。</p>
+<p>これまでの特別劇場とは異なり、主人公のパエトーン兄妹もしっかり話に絡む構成でした。
+ジェーンや柳の場合は特別劇場で個人を取り上げ、所属陣営とパエトーンとの絡みはメインストーリーに配置していたのに対し、今回は陣営そのものを特別劇場に配置する都合上、パエトーンと面識のないまま進行するわけにはいかない、というところだったのかな、と。</p>
+<p>ただ、ストーリーの流れとしては、正直なところ端折り過ぎたな、という感想です。
+特にイヴリン視点なのに、複雑なイヴリンの立場を説明なしにいきなり進行するのでやや混乱しました。</p>
+<p>これなら素直にメインストーリーとして十分な尺を使って進めてほしかったですね。あとでスターズ・オブ・リラのメインストーリーは別でやるのかもしれないけど。</p>
+<p>それを抜きにして見ると、ストーリーとしては簡潔に纏まっていつつも、後の展開への布石となるような部分も見えてきて（TOPSが次の敵になるのかな？）、メインストーリー第2部への繋ぎとしての役割は十分果たせていたかな、と。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="実装エージェント">実装エージェント<a href="https://sanasuno.github.io/blog/2025/03/11/1#%E5%AE%9F%E8%A3%85%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88" class="hash-link" aria-label="実装エージェント への直接リンク" title="実装エージェント への直接リンク">​</a></h2>
+<p>今回は前半でアストラ、後半でイヴリンが追加。二人ともS級です。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="アストラ">アストラ<a href="https://sanasuno.github.io/blog/2025/03/11/1#%E3%82%A2%E3%82%B9%E3%83%88%E3%83%A9" class="hash-link" aria-label="アストラ への直接リンク" title="アストラ への直接リンク">​</a></h3>
+<p>遂にやって来た初の限定支援エージェント。攻撃力、与ダメージ、会心ダメージへのバフに、おまけでHP回復まで引っ提げてきました。
+シーザーが防護ながらかなり高いバフ能力を引っ提げて来たので、支援のアストラはどうなるかと思っていたら、しっかりと期待を超えてきてくれましたね。</p>
+<p>地味に三人目のエーテル属性ということもあって、朱鳶はかなり強化されたと思います。これまで混沌のヘヴィメタルの効果の起動が結構厳しかったのでね……
+あとクイック支援連発によってアンドーが超強化されてたのは笑いました、だって絵面が面白すぎるでしょアンドーミサイル。</p>
+<p>もちろん他のアタッカーたちも相当強化されましたし、HP回復も塔で滅茶苦茶助かる。かなり強いですね。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="イヴリン">イヴリン<a href="https://sanasuno.github.io/blog/2025/03/11/1#%E3%82%A4%E3%83%B4%E3%83%AA%E3%83%B3" class="hash-link" aria-label="イヴリン への直接リンク" title="イヴリン への直接リンク">​</a></h3>
+<p>後半は炎強攻のイヴリン。連携スキルで火力を出す、という点は今までになかったタイプですね。
+ライトが撃破としてかなり噛み合うのもあって、アタッカーとしては火力は高いと思います。<del>流石に雅には及ばないけど</del></p>
+<p>ただ個人的な使用感としては、ちょっと回避に癖があるというか、防御面での撃たれ弱さが気になったかな。多分慣れたら問題ないんでしょうけども。
+同じ炎強攻の11号の方は目押し要素があるので、好みの問題で使い分けって感じですかね。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="イベント">イベント<a href="https://sanasuno.github.io/blog/2025/03/11/1#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="hash-link" aria-label="イベント への直接リンク" title="イベント への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="願いがきらめく日">願いがきらめく日<a href="https://sanasuno.github.io/blog/2025/03/11/1#%E9%A1%98%E3%81%84%E3%81%8C%E3%81%8D%E3%82%89%E3%82%81%E3%81%8F%E6%97%A5" class="hash-link" aria-label="願いがきらめく日 への直接リンク" title="願いがきらめく日 への直接リンク">​</a></h3>
+<p>ストーリーはイアスにフォーカスしていてかなり良かったです。特別劇場の後日談としても、旧正月と合わせた季節イベントとしても面白かった。
+ただミニゲームの方なんですが、ちょっとステージ数が多くて作業感が強かったかな……。内容自体は嫌いではないんですけどね。
+フ○ール○イズの方は素直に楽しかったです。なんせ元が良いからね。</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="エルピス最強釣り師決定戦">エルピス最強釣り師決定戦<a href="https://sanasuno.github.io/blog/2025/03/11/1#%E3%82%A8%E3%83%AB%E3%83%94%E3%82%B9%E6%9C%80%E5%BC%B7%E9%87%A3%E3%82%8A%E5%B8%AB%E6%B1%BA%E5%AE%9A%E6%88%A6" class="hash-link" aria-label="エルピス最強釣り師決定戦 への直接リンク" title="エルピス最強釣り師決定戦 への直接リンク">​</a></h3>
+<p><strong>やっぱ釣りってク○だわ。</strong>
+ううん……報酬コンプは諦めました、あまりにも苦痛すぎる。
+なんかどのゲームでも取り敢えずミニゲームといえば釣り！ってなってるのはなんですかね？
+個人的にはあまり面白いとは思えませんでした。好きな人もいるんだろうけども。
+あ、ストーリー自体はよかったです、サブイベントも充実していたし。</p>
+<p>ざっとこんな感じですかね。それではVer1.6を楽しんできます。</p>]]></content:encoded>
+            <category>ゼンレスゾーンゼロ</category>
+        </item>
+        <item>
             <title><![CDATA[はじめに]]></title>
-            <link>https://sanasuno.github.io/blog/2025/02/28/a</link>
-            <guid>https://sanasuno.github.io/blog/2025/02/28/a</guid>
+            <link>https://sanasuno.github.io/blog/2025/02/28/1</link>
+            <guid>https://sanasuno.github.io/blog/2025/02/28/1</guid>
             <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[どうも、さなすのです。]]></description>
             <content:encoded><![CDATA[<p>どうも、さなすのです。</p>
