@@ -149,7 +149,6 @@ const config = {
         {
           hashed: true,
           language: ["ja"],
-          forceIgonoreNoIndex: true,
         },
       ],
     ],
