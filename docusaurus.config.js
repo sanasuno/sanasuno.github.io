@@ -89,11 +89,6 @@ const config = {
             label: 'ゼンレスゾーンゼロ',
           },
           {to: '/blog', label: 'ブログ', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
       docs: {
