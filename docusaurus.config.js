@@ -149,8 +149,9 @@ const config = {
         {
           hashed: true,
           language: ["ja"],
-        }
-      ]
+          docsRouteBasePath: "/",
+        },
+      ],
     ],
 };
 
