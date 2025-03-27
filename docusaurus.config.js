@@ -151,7 +151,7 @@ const config = {
     customFields: {
       giscus: {
         repo: 'sanasuno/sanasuno.github.io',
-        rpoId: 'R_kgDOOKiROg',
+        repoId: 'R_kgDOOKiROg',
         category: 'Announcements',
         categoryId: 'DIC_kwDOOKiROs4Cofrm',
         mapping: 'pathname',
