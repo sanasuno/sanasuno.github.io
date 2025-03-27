@@ -148,6 +148,17 @@ const config = {
         },
       ],
     ],
+    customFields: {
+      giscus: {
+        repo: 'sanasuno/sanasuno.github.io',
+        rpoId: 'R_kgDOOKiROg',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOOKiROs4Cofrm',
+        mapping: 'pathname',
+        reactionEnabled: '1',
+        emitMetadata: '0',
+      },
+    },
 };
 
 export default config;
