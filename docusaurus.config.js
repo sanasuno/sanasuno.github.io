@@ -137,6 +137,15 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      giscus: {
+        repo: 'sanasuno/sanasuno.github.io',
+        repoId: 'R_kgDOOKiROg',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOOKiROs4Cofrm',
+        mapping: 'pathname',
+        reactionEnabled: '1',
+        emitMetadata: '0',
+      },
     }),
     plugins: [
       [
@@ -148,17 +157,6 @@ const config = {
         },
       ],
     ],
-    customFields: {
-      giscus: {
-        repo: 'sanasuno/sanasuno.github.io',
-        repoId: 'R_kgDOOKiROg',
-        category: 'Announcements',
-        categoryId: 'DIC_kwDOOKiROs4Cofrm',
-        mapping: 'pathname',
-        reactionEnabled: '1',
-        emitMetadata: '0',
-      },
-    },
 };
 
 export default config;
