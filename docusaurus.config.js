@@ -84,9 +84,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'zzzSidebar',
+            sidebarId: 'conlangSidebar',
             position: 'left',
-            label: 'ゼンレスゾーンゼロ',
+            label: '人工言語',
           },
           {to: '/blog', label: 'ブログ', position: 'left'},
         ],
