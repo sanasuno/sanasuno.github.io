@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgh_page=self.webpackChunkgh_page||[]).push([[947],{6600:a=>{a.exports=JSON.parse('{"authors":[{"name":"sanasuno","key":"sanasuno","page":null,"count":0}]}')}}]);
