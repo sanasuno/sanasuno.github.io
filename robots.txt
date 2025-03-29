@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://sanasuno.github.io/sitemap.xml
